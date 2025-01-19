@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Recommendation Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+    section {
+      padding: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    form input, form textarea, form button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Travel Recommendation Website</h1>
+  </header>
+  <nav>
+    <a href="#home" onclick="showSection('home')">Home</a>
+    <a href="#about" onclick="showSection('about')">About Us</a>
+    <a href="#contact" onclick="showSection('contact')">Contact Us</a>
+    <a href="#beaches" onclick="showSection('beaches')">Beaches</a>
+    <a href="#temples" onclick="showSection('temples')">Temples</a>
+    <a href="#countries" onclick="showSection('countries')">Countries</a>
+  </nav>
+  <div class="container">
+    <!-- Home Section -->
+    <section id="home">
+      <h2>Welcome to Our Travel Recommendation Website</h2>
+      <p>Discover amazing destinations tailored to your preferences!</p>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="hidden">
+      <h2>About Us</h2>
+      <p>We are passionate about helping travelers find their ideal destinations. Our mission is to provide personalized recommendations to make every trip memorable.</p>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="hidden">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Beaches Section -->
+    <section id="beaches" class="hidden">
+      <h2>Beach Recommendations</h2>
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Beach_view.jpg" alt="Beach 1">
+        <p>Sunny Beach: Relax on the golden sands and enjoy crystal-clear waters.</p>
+      </div>
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Beach_in_Hawaii.jpg" alt="Beach 2">
+        <p>Paradise Cove: Experience breathtaking sunsets and peaceful surroundings.</p>
+      </div>
+    </section>
+
+    <!-- Temples Section -->
+    <section id="temples" class="hidden">
+      <h2>Temple Recommendations</h2>
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Angkor_Wat_temple.jpg" alt="Temple 1">
+        <p>Ancient Temple: A historic site rich in culture and heritage.</p>
+      </div>
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Golden_temple_India.jpg" alt="Temple 2">
+        <p>Sacred Shrine: A peaceful retreat for spiritual reflection.</p>
+      </div>
+    </section>
+
+    <!-- Countries Section -->
+    <section id="countries" class="hidden">
+      <h2>Recommendations by Country</h2>
+      <div>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/14/Tokyo_Tower_and_Mount_Fuji.jpg" alt="Japan">
+        <p>Explore the best destinations in Japan: From Tokyo's bustling streets to Kyoto's serene temples.</p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.classList.add('hidden'));
+      document.getElementById(sectionId).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
